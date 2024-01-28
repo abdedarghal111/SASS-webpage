@@ -1,7 +1,8 @@
+@use '_config';
+
 body{
     margin:0px;
-    color:white;
-    background-color: black;
+    background-color: $fondo-general ;
 }
 
 h1{
