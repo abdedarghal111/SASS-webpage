@@ -1,14 +1,10 @@
-@use '_config';
+@use 'config';
 
 body{
     margin:0px;
-    background-color: $fondo-general ;
-}
+    background-color: config.$backBackground-color;
 
-h1{
-    background-color: rgb(13, 0, 255);
-    margin: 10px;
-    padding: 10px;
-    display: block;
-    border-radius: 20px;
+    h1{
+        
+    }
 }
