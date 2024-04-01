@@ -1,0 +1,148 @@
+@use "interfaceCss";
+@use "config";
+
+$backgroundColor: config.$izqBackgroundColor;
+$secondBackgroundColor: #252531;
+$thirdBackroundColor: #24242f;
+$lightlightPadding: 5px;
+$lightPadding: 20px;
+$mediumPadding: 40px;
+
+
+
+#contGenIzq {
+    background-color: $backgroundColor;
+    @include interfaceCss.listFlex($justifyContent: space-between);
+    > .upperDiv {
+        @extend %fullWidth;
+        @include interfaceCss.listFlex(10px,start,center);
+        background-color: $secondBackgroundColor;
+        padding: $lightPadding;
+
+        > .profilePhoto {
+            width: 100px;
+            border-radius: 100px;
+            aspect-ratio: 1/1;
+        }
+
+        > .emphasizedText {
+            @include interfaceCss.emphasizedText1();
+            text-align: center;
+        }
+
+        > .paragraphStyle1 {
+            @include interfaceCss.paragraphStyle1($textAlign: center);
+        }
+    }
+
+    > .centerDiv {
+        @extend %fullWidth;
+        padding: $lightPadding;
+        > .div2 {
+            > div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: $lightlightPadding;
+                > p {
+                    width: fit-content;
+                    margin: 0;
+                }
+                > .left {
+                    @include interfaceCss.emphasizedText1();
+                }
+                > .right {
+                    @include interfaceCss.paragraphStyle1();
+                    font-weight: bold;
+                }
+            }
+        }
+
+        > .div3 {
+            display:flex;
+            //gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            > div {
+                //flex: 1;
+                flex: 1;
+                @include interfaceCss.listFlex($justifyContent: space-between,$alignItems: center);
+                > .externContainer {
+                    @extend %circuloExperiencia;
+                }
+                > p {
+                    margin: 0;
+                    width: fit-content;
+                    @include interfaceCss.emphasizedText1();
+                }
+            }
+            
+        }
+
+        > .div4 {
+            > div {
+                margin: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                > .text1, >.text2 {
+                    flex-basis: 50%;
+                    flex-shrink: 0.4;
+                    flex-grow: 0.6;
+                    //padding-inline: 10px;
+                }
+                > .text1 {
+                    justify-content: start;
+                    text-align: start;
+                    @include interfaceCss.emphasizedText1();
+                }
+                > .text2 {
+                    justify-content: end;
+                    @include interfaceCss.paragraphStyle1($TextColor: #adacb1, $textAlign:end);
+                    font-weight: bold;
+                }
+                > .progressBar {
+                    @extend %linearProgressBar;
+                    margin-top: 3px;
+                    //padding-inline: 10px;
+                }
+            }
+        }
+
+        > .div5 {
+            a {
+                @extend %removeAStyle;
+                @include interfaceCss.paragraphStyle1();
+                @include interfaceCss.listFlex($alignItems: center);
+                flex-direction:row;
+                font-weight: bolder;
+                padding-inline: 5px;
+            }
+            img {
+                display: inline;
+                width: 15px;
+            }
+        }
+
+        > .separatorLine {
+            @include interfaceCss.separatorLine($heigth: 2.5px,$opacity:0.5);
+            margin: 15px 0;
+        }
+
+    }
+
+    > .bottomDiv {
+        @extend %fullWidth;
+        background-color: $thirdBackroundColor;
+        @extend %flexCenter;
+        justify-content: space-around;
+        padding: 20px;
+
+        a {
+            width: 10%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

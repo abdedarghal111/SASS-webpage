@@ -1,6 +1,228 @@
+@property --percent {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@keyframes progressAnim {
+  from {
+    --percent:0%;
+  }
+}
+#contGenIzq > .upperDiv, #contGenIzq > .centerDiv, #contGenIzq > .bottomDiv {
+  width: 100%;
+}
+
+#contGenIzq > .bottomDiv, #contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle .externCircle, #contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle, #contGenIzq > .centerDiv > .div3 > div > .externContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contGenIzq > .centerDiv > .div5 a {
+  text-decoration: none;
+}
+
+#contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle .externCircle, #contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle {
+  border-radius: 50%;
+}
+
+#contGenIzq > .centerDiv > .div3 > div > .externContainer {
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+#contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle {
+  aspect-ratio: 1/1;
+  padding: 3px;
+  width: 45px;
+  background: conic-gradient(#ddc37a var(--percent), #000 var(--percent));
+  animation: progressAnim 3s ease-out;
+}
+#contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle .externCircle {
+  aspect-ratio: 1/1;
+  background-color: #1f1f2b;
+  width: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #c2c0c5;
+}
+
+#contGenIzq > .centerDiv > .div4 > div > .progressBar {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+}
+#contGenIzq > .centerDiv > .div4 > div > .progressBar > div {
+  background-color: #ddc37a;
+  height: 100%;
+  width: var(--percent);
+  animation: progressAnim 3s ease-out;
+}
+
+#contGenIzq {
+  background-color: #1f1f2b;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: space-between;
+  align-items: start;
+}
+#contGenIzq > .upperDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  background-color: #252531;
+  padding: 20px;
+}
+#contGenIzq > .upperDiv > .profilePhoto {
+  width: 100px;
+  border-radius: 100px;
+  aspect-ratio: 1/1;
+}
+#contGenIzq > .upperDiv > .emphasizedText {
+  font-weight: bold;
+  color: #FFF;
+  font-size: 13px;
+  text-align: center;
+}
+#contGenIzq > .upperDiv > .paragraphStyle1 {
+  color: #929098;
+  font-size: 12px;
+  text-align: center;
+}
+#contGenIzq > .centerDiv {
+  padding: 20px;
+}
+#contGenIzq > .centerDiv > .div2 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 5px;
+}
+#contGenIzq > .centerDiv > .div2 > div > p {
+  width: fit-content;
+  margin: 0;
+}
+#contGenIzq > .centerDiv > .div2 > div > .left {
+  font-weight: bold;
+  color: #FFF;
+  font-size: 13px;
+}
+#contGenIzq > .centerDiv > .div2 > div > .right {
+  color: #929098;
+  font-size: 12px;
+  text-align: start;
+  font-weight: bold;
+}
+#contGenIzq > .centerDiv > .div3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#contGenIzq > .centerDiv > .div3 > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+#contGenIzq > .centerDiv > .div3 > div > p {
+  margin: 0;
+  width: fit-content;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 13px;
+}
+#contGenIzq > .centerDiv > .div4 > div {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#contGenIzq > .centerDiv > .div4 > div > .text1, #contGenIzq > .centerDiv > .div4 > div > .text2 {
+  flex-basis: 50%;
+  flex-shrink: 0.4;
+  flex-grow: 0.6;
+}
+#contGenIzq > .centerDiv > .div4 > div > .text1 {
+  justify-content: start;
+  text-align: start;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 13px;
+}
+#contGenIzq > .centerDiv > .div4 > div > .text2 {
+  justify-content: end;
+  color: #adacb1;
+  font-size: 12px;
+  text-align: end;
+  font-weight: bold;
+}
+#contGenIzq > .centerDiv > .div4 > div > .progressBar {
+  margin-top: 3px;
+}
+#contGenIzq > .centerDiv > .div5 a {
+  color: #929098;
+  font-size: 12px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  font-weight: bolder;
+  padding-inline: 5px;
+}
+#contGenIzq > .centerDiv > .div5 img {
+  display: inline;
+  width: 15px;
+}
+#contGenIzq > .centerDiv > .separatorLine {
+  width: 100%;
+  height: 2.5px;
+  background-color: #929098;
+  border-radius: 2px;
+  opacity: 0.5;
+  margin: 15px 0;
+}
+#contGenIzq > .bottomDiv {
+  background-color: #24242f;
+  justify-content: space-around;
+  padding: 20px;
+}
+#contGenIzq > .bottomDiv a {
+  width: 10%;
+}
+#contGenIzq > .bottomDiv img {
+  width: 100%;
+}
+
+#contGenDer {
+  background-color: #1e1e2a;
+}
+
+* {
+  box-sizing: border-box;
+  color: #FFF;
+  font-family: sans-serif;
+}
+
 body {
   margin: 0px;
-  background-color: #191A24;
+  width: 100%;
+  height: 100%;
+}
+
+#contGlobal {
+  background-color: #7b8580;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: grid;
+  grid-template: 100% 1fr/1fr 3fr;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,97 @@
+@use "config";
+
+@property --percent {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+@keyframes progressAnim {
+    from{--percent:0%;}
+}
+
+%fullWidth {
+    width: 100%;
+}
+
+%flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%removeAStyle {
+    text-decoration: none;
+}
+
+%circular {
+    border-radius: 50%;
+}
+
+@mixin emphasizedText1($TextColor: #FFF) {
+    font-weight: bold;
+    color: $TextColor;
+    font-size: config.$smallTextFont;
+}
+
+@mixin paragraphStyle1($TextColor: #929098, $textAlign: start){
+    color: $TextColor;
+    font-size: config.$extraSmallTextFont;
+    text-align: $textAlign;
+}
+
+@mixin listFlex($gap: 0px, $justifyContent: start,$alignItems: start) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin separatorLine($heigth: 10px, $color: #929098,$borderRadius: 2px, $opacity: 1){
+    width: 100%;
+    height: $heigth;
+    background-color: $color;
+    border-radius: $borderRadius;
+    opacity: $opacity;
+}
+
+%circuloExperiencia {
+    @extend %flexCenter;
+    aspect-ratio: 1/1;
+    width: 100%;
+    .innerCircle {
+        @extend %flexCenter;
+        aspect-ratio: 1/1;
+        @extend %circular;        
+        //background-color: config.$defaultYelow;
+        padding: 3px;
+        width: 45px;
+        background: conic-gradient(
+            #ddc37a var(--percent),#000 var(--percent)
+        );
+        animation: progressAnim 3s ease-out;
+        .externCircle {
+            @extend %flexCenter;
+            aspect-ratio: 1/1;
+            @extend %circular;
+            background-color: config.$izqBackgroundColor;
+            width: 40px;   
+            font-size: 12px;
+            font-weight: bold;
+            color: #c2c0c5;
+        }
+    }
+}
+
+%linearProgressBar {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    > div {
+        background-color: #ddc37a;
+        height: 100%;
+        width: var(--percent);
+        animation: progressAnim 3s ease-out;
+    }
+}
