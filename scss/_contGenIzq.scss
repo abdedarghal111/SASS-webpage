@@ -13,6 +13,7 @@ $mediumPadding: 40px;
 #contGenIzq {
     background-color: $backgroundColor;
     @include interfaceCss.listFlex($justifyContent: space-between);
+    min-width: 300px;
     > .upperDiv {
         @extend %fullWidth;
         @include interfaceCss.listFlex(10px,start,center);
@@ -65,7 +66,7 @@ $mediumPadding: 40px;
             align-items: center;
             justify-content: space-between;
             > div {
-                //flex: 1;
+                
                 flex: 1;
                 @include interfaceCss.listFlex($justifyContent: space-between,$alignItems: center);
                 > .externContainer {
@@ -73,6 +74,7 @@ $mediumPadding: 40px;
                 }
                 > p {
                     margin: 0;
+                    margin-top: 5px;
                     width: fit-content;
                     @include interfaceCss.emphasizedText1();
                 }
