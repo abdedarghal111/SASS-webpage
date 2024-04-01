@@ -59,7 +59,7 @@
 %circuloExperiencia {
     @extend %flexCenter;
     aspect-ratio: 1/1;
-    width: 100%;
+    height: 100%;
     .innerCircle {
         @extend %flexCenter;
         aspect-ratio: 1/1;
