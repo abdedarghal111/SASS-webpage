@@ -5,10 +5,11 @@
 * {
     box-sizing: border-box;
     color: config.$defaultTextColor;
-    font-family: sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    //letter-spacing: 0.2cap;
 }
 
-body{
+body {
     margin: 0px;
     //width: 100vw;
     //height: 100vh;

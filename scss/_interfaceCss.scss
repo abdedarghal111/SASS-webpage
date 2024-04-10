@@ -24,6 +24,11 @@
     text-decoration: none;
 }
 
+%removeListStyle {
+    list-style: none;
+    padding-left: 0;
+}
+
 %circular {
     border-radius: 50%;
 }
@@ -68,7 +73,7 @@
         padding: 3px;
         width: 45px;
         background: conic-gradient(
-            #ddc37a var(--percent),#000 var(--percent)
+            config.$defaultYelow var(--percent),#000 var(--percent)
         );
         animation: progressAnim 3s ease-out;
         .externCircle {
@@ -89,7 +94,7 @@
     height: 3px;
     background-color: #000;
     > div {
-        background-color: #ddc37a;
+        background-color: config.$defaultYelow;
         height: 100%;
         width: var(--percent);
         animation: progressAnim 3s ease-out;

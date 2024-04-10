@@ -1,7 +1,85 @@
+@use "interfaceCss";
+@use "config";
+
 $background-color: #1e1e2a;
+$secondBackgroundColor: #252531;
+$thirdBackroundColor: #1f1f2b;
 
 #contGenDer {
     background-color: $background-color;
-    //grid-row: 2/3;
-    //grid-column: 1;
+    display: grid;
+    grid-template:  100% 5fr / 1fr fit-content(100px);
+    
+    
+    > .menu {
+        margin: 20px;
+        > .welcomeDiv {
+            background-image: url("../res/img/backgroundMountain.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            > .innerDiv {
+                padding: 20px;
+                flex: 1;
+                backdrop-filter: brightness(30%);
+
+                > #functionalCodeBlock {
+                    font-family: 'Courier New', Courier, monospace;
+                    .color3 {
+                        border-right: solid white 1px;
+                    }
+                    i {
+                        color: config.$defaultYelow;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    }
+    
+    > .sideMenu {
+        
+        background-color: $thirdBackroundColor;
+
+        > .listImgContainer {
+            background-color: $secondBackgroundColor;
+            min-width: 50px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            img {
+                width: 40%;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        > .optionsContainer {
+            
+            margin: 10px;
+            @include interfaceCss.emphasizedText1();
+            
+
+            a {
+                @extend %removeAStyle;
+                @include interfaceCss.paragraphStyle1();
+                font-size: config.$mediumTextFont;
+            }
+            ul {
+                @extend %removeListStyle;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 100%;
+            }
+            li {
+                //rotate: 90deg;
+                writing-mode: vertical-lr;
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    }
 }

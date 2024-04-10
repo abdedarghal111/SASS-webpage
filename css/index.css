@@ -18,8 +18,13 @@
   justify-content: center;
 }
 
-#contGenIzq > .centerDiv > .div5 a {
+#contGenDer > .sideMenu > .optionsContainer a, #contGenIzq > .centerDiv > .div5 a {
   text-decoration: none;
+}
+
+#contGenDer > .sideMenu > .optionsContainer ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 #contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle .externCircle, #contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle {
@@ -34,7 +39,7 @@
   aspect-ratio: 1/1;
   padding: 3px;
   width: 45px;
-  background: conic-gradient(#ddc37a var(--percent), #000 var(--percent));
+  background: conic-gradient(#e9e627 var(--percent), #000 var(--percent));
   animation: progressAnim 3s ease-out;
 }
 #contGenIzq > .centerDiv > .div3 > div > .externContainer .innerCircle .externCircle {
@@ -52,7 +57,7 @@
   background-color: #000;
 }
 #contGenIzq > .centerDiv > .div4 > div > .progressBar > div {
-  background-color: #ddc37a;
+  background-color: #e9e627;
   height: 100%;
   width: var(--percent);
   animation: progressAnim 3s ease-out;
@@ -204,12 +209,78 @@
 
 #contGenDer {
   background-color: #1e1e2a;
+  display: grid;
+  grid-template: 100% 5fr/1fr fit-content(100px);
+}
+#contGenDer > .menu {
+  margin: 20px;
+}
+#contGenDer > .menu > .welcomeDiv {
+  background-image: url("../res/img/backgroundMountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+#contGenDer > .menu > .welcomeDiv > .innerDiv {
+  padding: 20px;
+  flex: 1;
+  backdrop-filter: brightness(30%);
+}
+#contGenDer > .menu > .welcomeDiv > .innerDiv > #functionalCodeBlock {
+  font-family: "Courier New", Courier, monospace;
+}
+#contGenDer > .menu > .welcomeDiv > .innerDiv > #functionalCodeBlock .color3 {
+  border-right: solid white 1px;
+}
+#contGenDer > .menu > .welcomeDiv > .innerDiv > #functionalCodeBlock i {
+  color: #e9e627;
+  font-style: normal;
+}
+#contGenDer > .sideMenu {
+  background-color: #1f1f2b;
+}
+#contGenDer > .sideMenu > .listImgContainer {
+  background-color: #252531;
+  min-width: 50px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+#contGenDer > .sideMenu > .listImgContainer img {
+  width: 40%;
+  aspect-ratio: 1/1;
+}
+#contGenDer > .sideMenu > .optionsContainer {
+  margin: 10px;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 13px;
+}
+#contGenDer > .sideMenu > .optionsContainer a {
+  color: #929098;
+  font-size: 12px;
+  text-align: start;
+  font-size: 14px;
+}
+#contGenDer > .sideMenu > .optionsContainer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+}
+#contGenDer > .sideMenu > .optionsContainer li {
+  writing-mode: vertical-lr;
+  text-align: center;
+  margin: 10px 0;
 }
 
 * {
   box-sizing: border-box;
   color: #FFF;
-  font-family: sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 body {
