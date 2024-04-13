@@ -36,6 +36,12 @@ $thirdBackroundColor: #1f1f2b;
                 }
             }
         }
+
+        > footer {
+            background-color: config.$defaultElementBackgroundColor;
+            width:auto;
+            margin: 10px;
+        }
     }
     
     > .sideMenu {

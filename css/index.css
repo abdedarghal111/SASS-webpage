@@ -237,6 +237,11 @@
   color: #e9e627;
   font-style: normal;
 }
+#contGenDer > .menu > footer {
+  background-color: #2d2d3b;
+  width: auto;
+  margin: 10px;
+}
 #contGenDer > .sideMenu {
   background-color: #1f1f2b;
 }
