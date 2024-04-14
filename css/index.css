@@ -63,6 +63,24 @@
   animation: progressAnim 3s ease-out;
 }
 
+#contGenDer > .menu > #mainMenuSmallStats > .stat > .big, #contGenDer > .menu > #mainMenuKnowedges > .elementsContainer > .block > h3 {
+  color: #e9e627;
+  font-size: 20px;
+}
+
+#contGenDer > .menu > #mainMenuKnowedges > .elementsContainer {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  gap: 20px;
+}
+
+#contGenDer > .menu > #mainMenuKnowedges > .elementsContainer > .block {
+  background-color: #2d2d3b;
+  padding: 20px;
+}
+
 #contGenIzq {
   background-color: #1f1f2b;
   display: flex;
@@ -89,7 +107,7 @@
 #contGenIzq > .upperDiv > .emphasizedText {
   font-weight: bold;
   color: #FFF;
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 #contGenIzq > .upperDiv > .paragraphStyle1 {
@@ -114,7 +132,7 @@
 #contGenIzq > .centerDiv > .div2 > div > .left {
   font-weight: bold;
   color: #FFF;
-  font-size: 13px;
+  font-size: 14px;
 }
 #contGenIzq > .centerDiv > .div2 > div > .right {
   color: #929098;
@@ -141,7 +159,7 @@
   width: fit-content;
   font-weight: bold;
   color: #FFF;
-  font-size: 13px;
+  font-size: 14px;
 }
 #contGenIzq > .centerDiv > .div4 > div {
   margin: 10px;
@@ -158,7 +176,7 @@
   text-align: start;
   font-weight: bold;
   color: #FFF;
-  font-size: 13px;
+  font-size: 14px;
 }
 #contGenIzq > .centerDiv > .div4 > div > .text2 {
   justify-content: end;
@@ -214,6 +232,8 @@
 }
 #contGenDer > .menu {
   margin: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 #contGenDer > .menu > .welcomeDiv {
   background-image: url("../res/img/backgroundMountain.jpg");
@@ -236,6 +256,29 @@
 #contGenDer > .menu > .welcomeDiv > .innerDiv > #functionalCodeBlock i {
   color: #e9e627;
   font-style: normal;
+}
+#contGenDer > .menu > #mainMenuSmallStats {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+#contGenDer > .menu > #mainMenuSmallStats > .stat {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+#contGenDer > .menu > #mainMenuSmallStats > .stat > .small {
+  font-size: 14px;
+}
+#contGenDer > .menu > #mainMenuKnowedges > .elementsContainer > .block > h3 {
+  margin-top: 0px;
+}
+#contGenDer > .menu > #mainMenuKnowedges > .elementsContainer > .block > p {
+  color: #929098;
+  font-size: 12px;
+  text-align: start;
+  font-size: 14px;
+  margin: 0px;
 }
 #contGenDer > .menu > footer {
   background-color: #2d2d3b;
@@ -262,13 +305,13 @@
   margin: 10px;
   font-weight: bold;
   color: #FFF;
-  font-size: 13px;
+  font-size: 14px;
 }
 #contGenDer > .sideMenu > .optionsContainer a {
   color: #929098;
   font-size: 12px;
   text-align: start;
-  font-size: 14px;
+  font-size: 16px;
 }
 #contGenDer > .sideMenu > .optionsContainer ul {
   display: flex;

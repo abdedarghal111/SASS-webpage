@@ -13,6 +13,8 @@ $thirdBackroundColor: #1f1f2b;
     
     > .menu {
         margin: 20px;
+        overflow-y: scroll;
+        scrollbar-width: none;
         > .welcomeDiv {
             background-image: url("../res/img/backgroundMountain.jpg");
             background-repeat: no-repeat;
@@ -32,6 +34,42 @@ $thirdBackroundColor: #1f1f2b;
                     i {
                         color: config.$defaultYelow;
                         font-style: normal;
+                    }
+                }
+            }
+        }
+
+        > #mainMenuSmallStats {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+            > .stat {
+                display: flex;
+                align-items: baseline;
+                gap: 10px;
+                > .big {
+                    @extend %yellowBigText;
+                }
+                > .small {
+                    font-size: config.$smallTextFont;
+                }
+            }
+        }
+
+        > #mainMenuKnowedges {
+            > .elementsContainer {
+                @extend %basicElementsContainer;
+                > .block {
+                    @extend %basicElements;
+                    > h3 {
+                        margin-top: 0px;
+                        @extend %yellowBigText;
+                    }
+                    > p {
+                        @include interfaceCss.paragraphStyle1();
+                        font-size: config.$smallTextFont;
+                        margin: 0px;
                     }
                 }
             }

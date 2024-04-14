@@ -100,3 +100,21 @@
         animation: progressAnim 3s ease-out;
     }
 }
+
+%yellowBigText {
+    color: config.$defaultYelow;
+    font-size: config.$bigTextFont;
+}
+
+%basicElementsContainer {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 20px;
+}
+
+%basicElements {
+    background-color: config.$defaultElementBackgroundColor;
+    padding: 20px;
+}
