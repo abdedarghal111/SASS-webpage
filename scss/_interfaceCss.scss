@@ -39,7 +39,7 @@
     font-size: config.$smallTextFont;
 }
 
-@mixin paragraphStyle1($TextColor: #929098, $textAlign: start){
+@mixin paragraphStyle1($TextColor: config.$textColor1, $textAlign: start){
     color: $TextColor;
     font-size: config.$extraSmallTextFont;
     text-align: $textAlign;
@@ -53,7 +53,7 @@
     align-items: $alignItems;
 }
 
-@mixin separatorLine($heigth: 10px, $color: #929098,$borderRadius: 2px, $opacity: 1){
+@mixin separatorLine($heigth: 10px, $color: config.$svgIconColor,$borderRadius: 2px, $opacity: 1){
     width: 100%;
     height: $heigth;
     background-color: $color;

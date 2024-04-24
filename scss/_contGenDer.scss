@@ -8,14 +8,15 @@ $thirdBackroundColor: #1f1f2b;
 #contGenDer {
     background-color: $background-color;
     display: grid;
-    grid-template:  100% 5fr / 1fr fit-content(100px);
+    grid-template:  100% 5fr / 1fr fit-content(60px);
     
-    
+    // MARK: CENTRO
     > .menu {
         margin: 20px;
+        padding-top: 20px;
         overflow-y: scroll;
         scrollbar-width: none;
-        > .welcomeDiv {
+        > #menuWelcomeDiv {
             background-image: url("../res/img/backgroundMountain.jpg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -71,7 +72,15 @@ $thirdBackroundColor: #1f1f2b;
                         font-size: config.$smallTextFont;
                         margin: 0px;
                     }
+                    transition: all 0.2s linear;
                 }
+                > .block:hover {
+                    transform: scale(1.1) rotate(3deg);
+                    //transform: rotate(10deg);
+                    transition: all 0.2s linear;
+                }
+
+                
             }
         }
 
@@ -79,9 +88,33 @@ $thirdBackroundColor: #1f1f2b;
             background-color: config.$defaultElementBackgroundColor;
             width:auto;
             margin: 10px;
+            padding: 15px;
+            padding-inline: 30px;
+
+            > .credits, p, a {
+                @include interfaceCss.paragraphStyle1();
+                font-size: config.$smallTextFont;
+                text-align: center;
+            }
+
+            a {
+                transition: all 0.2s linear;
+            }
+
+            a:hover {
+                color: config.$onHoverTextColor1;
+                transition: all 0.2s linear;
+            }
+
+            >.credits {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
     
+    // MARK: DRCHA
     > .sideMenu {
         
         background-color: $thirdBackroundColor;
@@ -94,9 +127,17 @@ $thirdBackroundColor: #1f1f2b;
             display: flex;
             align-content: center;
             justify-content: center;
-            img {
-                width: 40%;
+            svg {
+                width: 60%;
                 aspect-ratio: 1/1;
+                fill: config.$svgIconColor;
+                rotate: 180deg;
+                transition: all 0.22s linear;
+            }
+
+            svg:hover {
+                fill:config.$onHoverTextColor1;
+                transition: all 0.22s linear;
             }
         }
 
@@ -110,19 +151,27 @@ $thirdBackroundColor: #1f1f2b;
                 @extend %removeAStyle;
                 @include interfaceCss.paragraphStyle1();
                 font-size: config.$mediumTextFont;
+                transition: all 0.2s linear;
             }
             ul {
                 @extend %removeListStyle;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                min-width: 100%;
+                //min-width: 100%;
             }
             li {
                 //rotate: 90deg;
                 writing-mode: vertical-lr;
                 text-align: center;
                 margin: 10px 0;
+                text-transform: uppercase;
+                
+            }
+
+            a:hover {
+                color: config.$onHoverTextColor1;
+                transition: all 0.2s linear;
             }
         }
     }
