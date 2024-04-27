@@ -1,7 +1,7 @@
 const messages = [
-    "Esto es una prueba para este js.",
-    "Esto es otra prueba.",
-    "Esto es la tercera prueba."
+    "Soy programador full-stack.",
+    "También me gusta programar videojuegos.",
+    "Y sobre todo disfruto programando y aprendiendo cosas nuevas."
 ]
 
 const textElement = document.querySelector("#functionalCodeBlock .dinamicText")

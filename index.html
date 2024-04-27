@@ -2,9 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        Página no responsive
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    -->
     <link rel="stylesheet" href="css/index.css">
-    <title>Mi curículum</title>
+    <title>Página demo</title>
 </head>
 <body>
     <wrapper id="contGlobal">
@@ -15,7 +18,7 @@
             <div class="upperDiv">
                 <img class="profilePhoto" src="res/img/profilePhoto.png" alt="Profile photo">
                 <div class="emphasizedText">Abderrahim Darghal Belkacemi</div>
-                <div class="paragraphStyle1">Full stack developer <br/>Programmer</div>
+                <div class="paragraphStyle1">Full stack developer<br/>Programmer</div>
             </div>
             <div class="centerDiv">
                 <div class="div1">
@@ -23,16 +26,17 @@
                 </div>
                 <div class="div2">
                     <div>
-                        <p class="left">Residence:</p>
-                        <p class="right">Spain</p>
+                        <p class="left">Residencia:</p>
+                        <p class="right">España</p>
                     </div>
                     <div>
-                        <p class="left">City:</p>
+                        <p class="left">Ciudad:</p>
                         <p class="right">Rojales</p>
                     </div>
                     <div>
-                        <p class="left">Age:</p>
-                        <p class="right">20</p>
+                        <p class="left">Edad:</p>
+                        <p class="right" id="ponerEdad">N/A</p>
+                        <script src="js/countBirthday.js"></script>
                     </div>
                 </div>
                 <div class="separatorLine"></div>
@@ -45,7 +49,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p>Spanish</p>
+                        <p>Español</p>
                     </div>
                     <div class="div2">
                         <div class="externContainer">
@@ -55,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p>English</p>
+                        <p>Inglés</p>
                     </div>
                     <div class="div3">
                         <div class="externContainer">
@@ -65,7 +69,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p>Valencian</p>
+                        <p>Valenciano</p>
                     </div>
                 </div>
                 <div class="separatorLine"></div>
@@ -138,8 +142,16 @@
             <div class="menu">
                 <div id="menuWelcomeDiv">
                     <div class="innerDiv">
-                        <h1>Una presentación presentable.</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolorem aliquid itaque ipsum odit consectetur reprehenderit nesciunt harum nihil autem quaerat accusantium laboriosam molestias quam corrupti modi, in quidem veritatis?</p>
+                        <h1>Un prototipo de curículum vitae.</h1>
+                        <p>Esta página web es un ejemplo de un curículum, 
+                            los <b>datos</b> son <b>reales</b> pero la página es solo 
+                            <b>una demo</b> demostrativa que he creado para ver las 
+                            capacidades de SASS.
+                        </p>
+                        <p>
+                            En caso de querer ver un curículum real redirigirse a mi 
+                            linkedin clickeando en el boton de linkedin(abajo a la izquierda).
+                        </p>
                         <div id="functionalCodeBlock">
                             &lt;<i>code</i>&gt;
                             <span class="dinamicText"></span>
@@ -152,26 +164,26 @@
                 <article id="mainMenuSmallStats">
                     <div class="stat">
                         <span class="big">4</span>
-                        <span class="small">Years Experience</span>
+                        <span class="small">Años de experiencia</span>
                     </div>
                     <div class="stat">
                         <span class="big">241</span>
-                        <span class="small">Java exercises</span>
+                        <span class="small">Ejercicios de java hechos</span>
                     </div>
                     <div class="stat">
                         <span class="big">83</span>
-                        <span class="small">programs with Lua</span>
+                        <span class="small">programas con Lua</span>
                     </div>
                     <div class="stat">
                         <span class="big">8</span>
-                        <span class="small">programming languajes</span>
+                        <span class="small">lenguajes de programación</span>
                     </div>
                     <script src="js/mainMenuSmallStatsScript.js"></script>
                 </article>
 
                 <article id="mainMenuKnowedges">
                     <h2>
-                        Knowedges
+                        Conocimientos
                     </h2>
                     <div class="elementsContainer">
                         <div class="block">
@@ -206,10 +218,10 @@
                 </article>
 
                 <footer>
-                    <div class="credits">
-                        <p>Inspired from <a href="https://colorlib.com/wp/resume-website-templates/">this page</a></p>
-                        <p>Page maded 100% by me with SCSS</p>
-                        <p>Code in <a href="https://github.com/abdedarghal111/abdedarghal111.github.io">my github</a></p>
+                    <div class="credits" id="creditos">
+                        <p>Inspirada en <a href="https://colorlib.com/wp/resume-website-templates/">this page</a></p>
+                        <p>Página hecha 100% por mí con SCSS, JS y HTML</p>
+                        <p>Código disponible en <a href="https://github.com/abdedarghal111/abdedarghal111.github.io">mi github</a></p>
                     </div>
                 </footer>
             </div>
@@ -223,8 +235,8 @@
                     <div class="optionsContainer">
                         <ul id="hamburguerElementList">
                             <li><a href="#menuWelcomeDiv">Home</a></li>
-                            <li><a href="#mainMenuKnowedges">Knowedges</a></li>
-                            <li><a href="#mainMenuKnowedges"></a></li>
+                            <li><a href="#mainMenuKnowedges">Conocimientos</a></li>
+                            <li><a href="#creditos">Creditos</a></li>
                         </ul>
                     </div>
                     <script src="js/slidingMenu.js"></script>
